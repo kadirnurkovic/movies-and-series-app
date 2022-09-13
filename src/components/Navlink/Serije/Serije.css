@@ -1,0 +1,13 @@
+.list-decoration{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 190, 114);
+    margin: 0;
+    border-top: 1px black solid;
+}
+li{
+    width: 100%px;
+    color: white
+}
