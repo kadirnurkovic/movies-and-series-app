@@ -1,5 +1,5 @@
 .container-div{
-  background-image: url('../src/components/movies.jpg');
+  background-color: #FAFAFA;
   height: 100vh;
 }
 .navigacija{
@@ -13,7 +13,6 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   color: black;
   border-radius: 15px;
   padding: 5px;
@@ -37,8 +36,8 @@ h1{
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  background-color: #61e0a7;
-  height: 10vh;
+  background-color: #5866dc;
+  height: 85px;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -68,4 +67,5 @@ h1{
   text-shadow: none;
   box-shadow: inset 0px 0px 9px black;
 }
+
 

@@ -1,0 +1,28 @@
+img{
+    width: 150px;
+}
+.map-class{
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar-class{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-radius: 25px;
+    height: 40px;
+    width: 300px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: 0px 0px 5px black;
+    margin: 10px;
+
+}
