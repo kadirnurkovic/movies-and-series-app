@@ -29,16 +29,10 @@ export default function FrontPage() {
 
     return (
         <div className='container'>
-            <div className='navBar'>
-                <NavLink to='movies' className='navItem'>Movies</NavLink>
-                <NavLink to='series' className='navItem'>TV Shows</NavLink>
-            </div>
-
-
-            <input type='text' placeholder='Search...' className='searchbar-class' onChange={(event) => {
-                setTerm(event.target.value)
-            }}/>
          <div className='searchList'>
+          <input type='text' placeholder='Search...' className='searchbar-class' onChange={(event) => {
+                setTerm(event.target.value)
+            }}/> 
             {api.filter((val) => {
                 if(term == ''){
                     return val
@@ -50,10 +44,7 @@ export default function FrontPage() {
                 <img src={el.image}></img>
                 <h1>{el.title}</h1>
                 </div>
-            )).slice(numberOfMoviesVistited , numberOfMoviesVistited + moviesPerPage)}
-          </div>
-          <div>
-            <Pagination count={numPages} page={page} onChange={handleChange} />
+            )).slice(0 , 3)}
           </div>
         </div>
     )

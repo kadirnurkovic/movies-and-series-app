@@ -8,15 +8,26 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.list-decoration{
+.list-decoration-movies{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(248, 190, 114);
+    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 li{
-    width: 100%px;
     color: white;
+}
+.container-div{
+  display: flex;
+  justify-content: center;
+}
+.search-results{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pagination-class{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }

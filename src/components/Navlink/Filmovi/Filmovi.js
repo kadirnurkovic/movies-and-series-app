@@ -5,8 +5,11 @@ import axios from 'axios'
 import './Filmovi.css'
 import moviesjson from './movies.json'
 import Pagination from '@mui/material/Pagination'
+import { useNavigate , Link } from 'react-router-dom'
+import { Card } from '@mui/material';
 
 export default function Filmovi() {
+    const navigate = useNavigate()
     const [searchTerm, setSearchTerm] = useState('')
     const [movies, setMovies] = useState([])
     const [showed, setShowed] = useState([]);
@@ -29,10 +32,12 @@ export default function Filmovi() {
     return (
         <div>
         <div className='header'>
-            </div>    
-         <input type="text"
+        <button><Link to='/'>Back to home</Link></button>
+        <input type="text"
         placeholder="Search..."
         onChange={(event) => setSearchTerm(event.target.value)} />
+            </div>   
+        <div className="search-results">
          {movies.filter((val) => {
             if (searchTerm == ''){
                 return val
@@ -40,19 +45,26 @@ export default function Filmovi() {
                 return val
             }
          }).map((el) => ( 
-            <div className='list-decoration'>
-            <div className='content'>
-            <ul style={{listStyleType:'none'}} key={el.id}>
-            <li>{el.title} {el.imDbRating}</li>
-            </ul>
-            </div>
-            <div className='image'>
-            <img src={el.image}></img>
+            <div className='list-decoration-movies'>
+            <div className='content' onClick={() => {
+                navigate(`${el.id}`,{
+                    state: {
+                        id: el.id,
+                        description: el.description,
+                        image: el.image,
+                        title: el.title
+                    }
+                })
+            }}>
+                <div>{el.title}</div>
+                <div><img src={el.image}></img></div>
+                <div>{el.description}</div>
             </div>
             </div>
          )).slice(numberOfMoviesVistited , numberOfMoviesVistited + moviesPerPage)}
-         <div>
-            <Pagination count={numPages} page={page} onChange={handleChange} />
+         </div>
+         <div className='div-pagination'>
+            <Pagination className="pagination-class" count={numPages} page={page} onChange={handleChange} />
         </div>
         </div>
         

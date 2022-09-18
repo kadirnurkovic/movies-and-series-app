@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import Filmovi from './components/Navlink/Filmovi/Filmovi'
 import Serije from './components/Navlink/Serije/Serije'
+import InfoPage from './components/Navlink/Filmovi/infoFilm'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
       <Route path='/' element={<App/>}></Route>
       <Route path='/filmovi' element={<Filmovi />}/>
       <Route path='/serije' element={<Serije />}/>
+      <Route path='/filmovi/:id' element={<InfoPage />}/>
      </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -19,7 +19,7 @@ export default function Serije() {
         <div>
             <button><Link to='/'>Back to home</Link></button>
          {series.map((el) => (
-            <ul key={el.id} className='list-decoration'>
+            <ul key={el.id} className='list-decoration-series'>
             <li>{el.title} {el.imDbRating}</li>
             </ul>
             ))
