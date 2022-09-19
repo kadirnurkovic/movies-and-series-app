@@ -1,6 +1,5 @@
 .container-div{
   background-color: #FAFAFA;
-  height: 100vh;
 }
 .navigacija{
   display: flex;
@@ -35,7 +34,7 @@ h1{
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  background-color: #5866dc;
+  background-image: linear-gradient(to top, rgb(105, 105, 162), white);
   height: 85px;
   align-items: center;
   padding-top: 10px;
@@ -57,11 +56,9 @@ h1{
   justify-content: center;
   align-items: center;
   padding: 5px;
-  border-radius: 20px;
 }
 .linkovi:hover{
   background-color: azure;
-  border-radius: 30px;
   transition: 0.4s;
   text-shadow: none;
   box-shadow: inset 0px 0px 9px black;

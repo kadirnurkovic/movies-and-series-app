@@ -6,10 +6,11 @@ import { Link , BrowserRouter as Router , Navlink ,Route} from 'react-router-dom
 import Filmovi from './components/Navlink/Filmovi/Filmovi'
 import Serije from './components/Navlink/Serije/Serije'
 import axios from 'axios'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (  
-    <div className='container-div'>
+    <div className='container'>
         <div className='div-filmovi-serije'>
           <Link to="/filmovi" className='linkovi'>Filmovi</Link>
           <Link to="/serije" className='linkovi'>Serije</Link>
@@ -17,6 +18,7 @@ function App() {
         <div>
           <Searchbar />
         </div>
+        <Footer />
     </div>
   );
 }

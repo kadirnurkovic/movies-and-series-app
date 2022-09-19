@@ -7,6 +7,7 @@ import moviesjson from './movies.json'
 import Pagination from '@mui/material/Pagination'
 import { useNavigate , Link } from 'react-router-dom'
 import { Card } from '@mui/material';
+import Footer from "../../Footer/Footer"
 
 export default function Filmovi() {
     const navigate = useNavigate()
@@ -29,10 +30,13 @@ export default function Filmovi() {
     useEffect(() => {
         getApi()
     },[])
+    useEffect(() => {
+        window.scrollTo(0 ,0)
+    },[handleChange])
     return (
         <div>
         <div className='header'>
-        <button><Link to='/'>Back to home</Link></button>
+        <div><Link to='/' className='back-link'>Back to home</Link></div>
         <input type="text"
         placeholder="Search..."
         onChange={(event) => setSearchTerm(event.target.value)} />
@@ -56,8 +60,8 @@ export default function Filmovi() {
                     }
                 })
             }}>
+                <div className='img-class'><img src={el.image}></img></div>
                 <div>{el.title}</div>
-                <div><img src={el.image}></img></div>
                 <div>{el.description}</div>
             </div>
             </div>
@@ -66,6 +70,7 @@ export default function Filmovi() {
          <div className='div-pagination'>
             <Pagination className="pagination-class" count={numPages} page={page} onChange={handleChange} />
         </div>
+         <Footer />
         </div>
         
     )

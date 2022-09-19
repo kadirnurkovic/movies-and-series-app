@@ -7,6 +7,7 @@ import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import Filmovi from './components/Navlink/Filmovi/Filmovi'
 import Serije from './components/Navlink/Serije/Serije'
 import InfoPage from './components/Navlink/Filmovi/infoFilm'
+import InfoSerija from './components/Navlink/Serije/infoSerija'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path='/filmovi' element={<Filmovi />}/>
       <Route path='/serije' element={<Serije />}/>
       <Route path='/filmovi/:id' element={<InfoPage />}/>
+      <Route path='/serije/:id'element={<InfoSerija />}/>
      </Routes>
     </BrowserRouter>
   </React.StrictMode>

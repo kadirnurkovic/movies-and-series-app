@@ -2,11 +2,16 @@ img{
     width: 150px;
 }
 .map-class{
-    height: min-content;
+    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
+}
+.map-class:hover{
+    transform: scale(1.09);
+    transition: 0.4s;
 }
 .search-list{
     display: flex;
@@ -25,7 +30,23 @@ img{
     box-shadow: 0px 0px 5px black;
     margin: 10px;
 }
-.container{
+.container-div{
     display: flex;
     flex-direction: column;
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+}
+.films-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 25px;
+    gap: 40px;
+    height: 90vh;
+}
+h1{
+    text-align: center;
 }
